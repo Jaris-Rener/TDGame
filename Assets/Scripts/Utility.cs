@@ -1,6 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Utility : MonoBehaviour
+public static class Utility
 {
-
+    public static T GetRandom<T>(this List<T> list)
+    {
+        return list[Random.Range(0, list.Count)];
+    }
 }
